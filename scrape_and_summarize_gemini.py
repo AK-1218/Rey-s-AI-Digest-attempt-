@@ -91,7 +91,18 @@ def summarize_with_gemini(model: genai.GenerativeModel, text: str) -> str:
         "- No opinions, no predictions.\n\n"
         "Article:\n"
         f"{trimmed}\n\n"
-        "Now write the 3-sentence summary:"
+        "Now write the 3-sentence summary and once you're done,\n"
+        "Also provide information for these categories:\n"
+        
+        "- Title: ...\n"
+        "- Summary: ...\n"
+        "- Link: ...\n"
+
+        "New Tool Launches\n"
+
+
+        "Major Announcements\n"
+        
     )
     for attempt in range(3):
         try:
